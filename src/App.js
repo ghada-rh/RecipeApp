@@ -9,19 +9,12 @@ const App = () => {
     getRecipes();
   }, []);
 
-  const getRecipes = () => {
-    /*const response = await fetch(
-      'https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}'
+  const getRecipes = async () => {
+    const response = await fetch(
+      "https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}"
     );
     const data = await response.json();
-    console.log(data);*/
-    fetch(
-      "https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}"
-    ).then(response => {
-      const data = response.json();
-       console.log(data);
-    });
-    
+    console.log(data);
   };
 
   return (
