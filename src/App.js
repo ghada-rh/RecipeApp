@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const App = () => {
-  const APP_ID = "51f45b0e";
-  const APP_KEY = "6553d5dfc4b3bc20c4a3c1d17e24660c";
+  const APP_ID = "4e9f05eb";
+  const APP_KEY = "9b904d703fa0d46a88ce1ac63f29f498";
 
   useEffect(() => {
     getRecipes();
@@ -11,7 +11,7 @@ const App = () => {
 
   const getRecipes = async () => {
     const response = await fetch(
-      "https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}"
+      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     const data = await response.json();
     console.log(data);
